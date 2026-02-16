@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Image Classifier</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body class="page page-upload">
+  <div class="overlay">
+    <h1 class="hero-title">IMAGE CLASSIFIER</h1>
+    <p class="hero-subtitle">Upload an image and get a prediction from your trained model.</p>
+
+    <form action="/predict" method="post" enctype="multipart/form-data" class="hero-form">
+      <label class="file-input">
+        <input type="file" name="file" accept="image/*" required />
+        <span>Upload an image</span>
+      </label>
+      <button type="submit" class="cta">Classify</button>
+    </form>
+
+    <p class="note">
+      Replace background images: <code>app/static/bg_upload.jpg</code> and <code>app/static/bg_result.jpg</code>.
+    </p>
+  </div>
+</body>
+</html>

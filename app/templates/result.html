@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Result</title>
+  <link rel="stylesheet" href="/static/style.css"/>
+</head>
+<body class="page page-result">
+  <div class="result-wrap">
+    <div class="result-card">
+      <div class="result-big">This is a <span class="accent">{{ label }}</span></div>
+      <div class="result-sub">Confidence: <b>{{ confidence }}</b></div>
+
+      <div class="topk">
+        <div class="topk-title">Top-3:</div>
+        <ul>
+          {% for l, c in top3 %}
+          <li><span class="lbl">{{ l }}</span> <span class="pct">{{ c }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <a class="back" href="/">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
